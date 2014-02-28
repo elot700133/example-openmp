@@ -23,4 +23,10 @@ example01()
         }
 
     } /* All threads join master thread and disband */
+
+
+    nthreads = omp_get_num_threads();
+    printf("example01 End Number of threads = %d\n", nthreads);
+
+    return 0;
 }

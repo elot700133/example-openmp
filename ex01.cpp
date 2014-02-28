@@ -15,9 +15,9 @@ ex01()
           nthreads = omp_get_num_threads();
           printf("Ex01 nthreads = %d\n",nthreads);
         }
-      int i;
+      int i=0;
 
-#pragma omp for //reduction(+:sum) schedule(static,5)
+#pragma omp for reduction(+:sum) schedule(static,5)
       for (i=0; i<10; i++)  // i variable is implicitly private when "for" directive is used
         {
           sum += i;
@@ -34,6 +34,10 @@ ex01()
 //          printf("tid = %d i = %d sum = %d\n",omp_get_thread_num(),i,sum );
 //        }
 //      printf("end 2tid = %d sum = %d\n",omp_get_thread_num(),sum);
+
+
+      tid = omp_get_thread_num();
+      printf("End Ex01 from thread = %d\n", tid);
     }
 //    printf("sum = %d\n",sum);
 }

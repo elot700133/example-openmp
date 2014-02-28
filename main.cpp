@@ -13,7 +13,7 @@ int main (int argc, char *argv[])
 //	example03();   // matrix operation with static scheduling
 //  example04();   // distribute serial code into 2 sections
 //  example05();   // orphan construct with reduction at the end to summation the sum variable with operator +
-  ex01();
+//  ex01();
 	return 0;
 }
 
